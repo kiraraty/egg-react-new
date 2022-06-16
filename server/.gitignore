@@ -1,18 +1,14 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/npm-debug.log*
-/yarn-error.log
-/yarn.lock
-/package-lock.json
-
-# production
-/dist
-
-# misc
+logs/
+npm-debug.log
+yarn-error.log
+node_modules/
+package-lock.json
+yarn.lock
+coverage/
+.idea/
+run/
 .DS_Store
-
-# umi
-.umi
-.umi-production
+*.sw*
+*.un~
+typings/
+.nyc_output/

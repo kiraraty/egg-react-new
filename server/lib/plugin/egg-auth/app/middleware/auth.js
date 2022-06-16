@@ -12,7 +12,7 @@ module.exports = options => {
     const user = userToken ? userToken === token : userToken;
     
     // 用户不存在，并且请求的路径在排除项之内
-    if (!user && !options.exclude.includes(url.split('?')[0])) {
+    if (!user && !options.exclude.includes(ctx.request.url.split('?')[0])) {
       ctx.body = {
         status: 1001,
         errMsg: '用户未登录'

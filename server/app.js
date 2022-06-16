@@ -13,6 +13,8 @@ module.exports = app => {
       store[key] = null;
     }
   };
-
+  
+  app.config.coreMiddleware.push('notFound');
   app.config.coreMiddleware.push('auth');
+  // console.log(app.config.coreMiddleware)
 }
