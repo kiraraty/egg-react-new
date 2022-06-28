@@ -23,6 +23,18 @@ module.exports = appInfo => {
     type: 'all'
   };
 
+  config.allowHosts = ['localhost:8000', '127.0.0.1:8000'];
+
+  config.interfaceLimit = {
+    maxCount: 3, // 最多请求个数
+    time: 3 * 1000, // 间隔时间
+  };
+
+  config.interfaceCache = {
+    expire: 10,
+    include: ['/api/user/detail']
+  };
+
   config.security = {
     csrf: {
       enable: false,
@@ -67,7 +79,7 @@ module.exports = appInfo => {
       port: '3306',
       user: 'root',
       password: 'abc123456',
-      database: 'egg'
+      database: 'egg_house'
     }
   };
 
@@ -75,7 +87,7 @@ module.exports = appInfo => {
     dialect: 'mysql',
     host: '127.0.0.1',
     port: '3306',
-    user: 'root',
+    user: 'myuser',
     password: 'abc123456',
     database: 'egg_house',
     define: {

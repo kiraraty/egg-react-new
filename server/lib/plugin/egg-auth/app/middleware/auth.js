@@ -4,7 +4,7 @@ module.exports = options => {
     const url = ctx.request.url;
     // console.log('url', url);
     // const user = ctx.session[ctx.username];
-    
+
     // 从前端请求中解析出token
     const token = ctx.request.token;
     // 根据username从redis中获取token
